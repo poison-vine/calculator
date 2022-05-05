@@ -1,15 +1,56 @@
-.container{
+.calculator-frame{
     background-color: lightblue;
-    width:33%;
+    width:33vw;
+    height: 80vh;
     margin: auto;
+    padding-top: 25px;
+    border: 2px solid black;
 }
 
+
 .calculator-display{
-    width: auto;
-    height: 20px;
+    width: 90%;
+    height: 10%;
     margin:auto;
+    padding-top: 5%;
     background-color: aliceblue;
+    border: 2px solid black;
+
 }
+
+.calculator-buttons{
+    display: grid;
+    width:90%;
+    height:50%;
+    grid-template-columns: repeat(4 , auto);
+    margin:15% auto 5% auto;
+    gap:20% 10%;
+}
+
+.number {
+    text-align: center;
+    background-color: aliceblue;
+    width: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: 2px solid black;
+
+
+}
+
+.operator
+{
+    text-align: center;
+    background-color: aliceblue;
+    width: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: 2px solid black;
+
+}
+
+
+
 
 
 
