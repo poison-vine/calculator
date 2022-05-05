@@ -16,19 +16,17 @@ function divide(x, y){
 
 function operate(x,y,operator)
 {
+    let px = parseInt(x);
+    let py = parseInt(y);
     switch(operator){
         case 'divide':
-            divide(x,y);
-            break;
+            return divide(px,py);
         case 'multiply':
-            multiply(x,y);
-            break;
+            return multiply(px,py);
         case 'add':
-            add(x,y);
-            break;
+            return add(px,py);
         case 'subtract':
-            subtract(x,y);
-            break;
+            return subtract(px,py);
     }
 }
 
