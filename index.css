@@ -1,7 +1,7 @@
 .calculator-frame{
     background-color: lightblue;
     width:33vw;
-    height: 80vh;
+    height: 60vh;
     margin: auto;
     padding-top: 25px;
     border: 2px solid black;
@@ -15,7 +15,9 @@
     padding-top: 5%;
     background-color: aliceblue;
     border: 2px solid black;
-
+    text-align:end;
+    vertical-align: middle;
+    
 }
 
 .calculator-buttons{
@@ -45,6 +47,11 @@
     padding-bottom: 10%;
     border: 2px solid black;
 
+}
+
+.number:active
+{
+    background-color: cyan;
 }
 
 
