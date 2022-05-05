@@ -4,5 +4,12 @@
     margin: auto;
 }
 
+.calculator-display{
+    width: auto;
+    height: 20px;
+    margin:auto;
+    background-color: aliceblue;
+}
+
 
 
