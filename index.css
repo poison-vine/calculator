@@ -1,10 +1,11 @@
+
 .calculator-frame{
     background-color: lightblue;
-    width:33vw;
-    height: 60vh;
+    width:50%;
     margin: auto;
-    padding-top: 25px;
+    padding-top: 2%;
     border: 2px solid black;
+    padding-bottom: 2%;
 }
 
 
@@ -12,21 +13,22 @@
     width: 90%;
     height: 10%;
     margin:auto;
-    padding-top: 5%;
+    padding-top: 3%;
+    padding-bottom:3%;
     background-color: aliceblue;
     border: 2px solid black;
     text-align:end;
-    vertical-align: middle;
     
 }
 
 .calculator-buttons{
     display: grid;
-    width:90%;
-    height:50%;
+    width:95%;
     grid-template-columns: repeat(4 , auto);
     margin:15% auto 5% auto;
-    gap:20% 10%;
+    gap:15% 5%;
+    padding:0% 0 20% 0 ;
+
 }
 
 .number {
@@ -41,7 +43,7 @@
 .operator
 {
     text-align: center;
-    background-color: aliceblue;
+    background-color: red;
     width: auto;
     padding-top: 10%;
     padding-bottom: 10%;
@@ -52,6 +54,10 @@
 .number:active
 {
     background-color: cyan;
+}
+
+#equals{
+    background-color: green;
 }
 
 
