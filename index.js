@@ -1,4 +1,8 @@
-let equation="";
+let firstValue = '';
+let secondValue = '';
+let operatorVal = '';
+let answer = 0;
+
 function add(x, y){
     return x + y;
 }
@@ -20,38 +24,55 @@ function operate(x,y,operator)
     let px = parseInt(x);
     let py = parseInt(y);
     switch(operator){
-        case 'divide':
+        case '÷':
             return divide(px,py);
-        case 'multiply':
+        case 'x':
             return multiply(px,py);
-        case 'add':
+        case '+':
             return add(px,py);
-        case 'subtract':
+        case '-':
             return subtract(px,py);
     }
 }
 
 
-function evaluateEquation(button){
-    console.log(button);
-    const display = document.querySelector("#display");
-
-    console.log(display);
-    if(button.id === "equals"){
-        console.log("equals");
-        processEquation();
-
+function numberEntered(number)
+{
+    if(operatorVal === ''){
+        firstValue += number.id;
     }
     else{
-        equation += button.id;
-        display.innerText = equation;
+        secondValue += number.id;
     }
-    
+
+    let disp = document.querySelector('#display');
+    if(disp.innerText === '0')disp.innerText = '';
+    disp.innerText += number.id;
 }
 
-function processEquation(){
-    display.innerText = equation;
-    equation = "";
+function operatorEntered(op)
+{
+    let disp = document.querySelector('#display');
+    disp.innerText += op.id;
+
+    if(operatorVal === ''){
+        operatorVal = op.id;
+    }
+    else if(secondValue !== '' && operatorVal !== ''){
+        firstValue = String(operate(firstValue , secondValue , operatorVal));
+        secondValue = '';
+        operatorVal = op.id;
+        console.log(firstValue);
+    }
+
+    if(operatorVal === 'equals')
+    {
+        disp.innerText = String(firstValue);
+        firstValue = '';
+        secondValue = '';
+        operatorVal = '';
+    }
 }
+
 
 
