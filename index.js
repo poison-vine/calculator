@@ -1,3 +1,4 @@
+let equation="";
 function add(x, y){
     return x + y;
 }
@@ -28,6 +29,29 @@ function operate(x,y,operator)
         case 'subtract':
             return subtract(px,py);
     }
+}
+
+
+function evaluateEquation(button){
+    console.log(button);
+    const display = document.querySelector("#display");
+
+    console.log(display);
+    if(button.id === "="){
+        console.log("equals");
+        processEquation();
+
+    }
+    else{
+        equation += button.id;
+        display.innerText = equation;
+    }
+    
+}
+
+function processEquation(){
+    display.innerText = equation;
+    equation = "";
 }
 
 
