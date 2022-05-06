@@ -37,7 +37,7 @@ function evaluateEquation(button){
     const display = document.querySelector("#display");
 
     console.log(display);
-    if(button.id === "="){
+    if(button.id === "equals"){
         console.log("equals");
         processEquation();
 
