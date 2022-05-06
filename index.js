@@ -75,4 +75,14 @@ function operatorEntered(op)
 }
 
 
+function clearDisplay()
+{
+    let disp = document.querySelector('#display');
+
+    disp.innerText = '0';
+    firstValue = '';
+    secondValue = '';
+    operatorVal = '';
+}
+
 
